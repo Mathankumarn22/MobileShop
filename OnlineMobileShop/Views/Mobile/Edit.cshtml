@@ -1,0 +1,52 @@
+﻿@model OnlineMobileShop.Models.AddMobiles
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Update", "Mobile", FormMethod.Post))
+{
+    @Html.HiddenFor(Model => Model.MobileID)
+    <table>
+        <tr>
+            <td>Brand</td>
+            <td>
+                @Html.EditorFor(Model => Model.Brand)
+            </td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>
+                @Html.EditorFor(Model => Model.Model)
+            </td>
+        </tr>
+        <tr>
+            <td>Battery</td>
+            <td>
+                @Html.EditorFor(Model => Model.Battery)
+            </td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>
+                @Html.EditorFor(Model => Model.Price)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Cancel", "DisplayDetails")
+            </td>
+            <td>
+                <input type="submit" value="Submit" />
+            </td>
+        </tr>
+
+    </table>
+}
+
+
+
+
+
