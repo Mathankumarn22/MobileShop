@@ -38,5 +38,10 @@ namespace OnlineMobileShop.BL
         {
             return UserRespo.LogIn(mailid, password);
         }
+        public void AddBrand(Entity.Brand brand)
+        {
+            BrandRepository repository = new BrandRepository();
+            repository.AddBrand(brand);
+        }
     }
 }

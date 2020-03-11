@@ -22,7 +22,9 @@ namespace OnlineMobileShop.Controllers
         {
             return View();
         }
+
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult SignUp(SignUp signUp)
         {
             Account account = new Account();

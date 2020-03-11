@@ -153,6 +153,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AddMobiles.cs" />
+    <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\LogIn.cs" />
     <Compile Include="Models\SignUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,6 +177,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Mobile\Edit.cshtml" />
     <Content Include="Views\Mobile\Create.cshtml" />
+    <Content Include="Views\Mobile\AddBrand.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

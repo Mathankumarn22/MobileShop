@@ -12,6 +12,7 @@
     }
     @using (Html.BeginForm("SignUp", "Account", FormMethod.Post))
     {
+        @Html.AntiForgeryToken()
         @DateTime.Now.ToString("T")
         <table>
 

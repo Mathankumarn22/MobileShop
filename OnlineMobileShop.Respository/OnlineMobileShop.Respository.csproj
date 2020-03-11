@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrandRepository.cs" />
     <Compile Include="DBContext.cs" />
     <Compile Include="Migrations\202003061213245_table.cs" />
     <Compile Include="Migrations\202003061213245_table.designer.cs">

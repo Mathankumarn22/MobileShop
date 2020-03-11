@@ -79,10 +79,26 @@ namespace OnlineMobileShop.Controllers
                 mobileBL.update(mobile);
             }
             return View();
-
-        
-
         }
-
+        [HttpGet]
+        public ActionResult AddBrand()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddBrand(Models.Brand brand)
+        {
+            if(ModelState.IsValid)
+            {
+                Entity.Brand brandDetails = new Entity.Brand()
+                {
+                    BrandName = brand.BrandName,
+                };
+                mobileBL.AddBrand(brandDetails);
+                return RedirectToAction("");
+            }
+    
+            return View();
+        }
     }
 }
