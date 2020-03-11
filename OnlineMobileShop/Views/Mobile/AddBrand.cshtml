@@ -8,15 +8,14 @@
 @using (Html.BeginForm("AddBrand", "Mobile", FormMethod.Post))
 {
     <div>
-        <div>
-            @Html.HiddenFor(Model => Model.BrandID)
-        </div>
+      
         <div>
             @Html.DisplayNameFor(Model=>Model.BrandName)
             @Html.TextBoxFor(Model=>Model.BrandName)
+            @Html.ValidationMessageFor(model => model.BrandName)
         </div>
         <div>
-            <input type="submit" />
+            <input type="submit" value="Add"/>
         </div>
     </div>
 }

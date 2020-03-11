@@ -18,5 +18,11 @@ namespace OnlineMobileShop.Respository
         public DbSet<Account> account { get; set; }
         public DbSet<Mobile> mobile { get; set; }
         public DbSet<Brand> brand { get; set; }
+
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Brand>().MapToStoredProcedures();
+        //    base.OnModelCreating(modelBuilder);
+        //}
     }
 }

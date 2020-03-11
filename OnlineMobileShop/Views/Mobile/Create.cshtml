@@ -1,4 +1,4 @@
-﻿@model OnlineMobileShop.Models.AddMobiles
+﻿@model  OnlineMobileShop.Entity.Mobile
 
 @{
     ViewBag.Title = "AddMobiles";
@@ -18,14 +18,7 @@
 {
     <table>
 
-        <tr>
-            <td>
-                @Html.Label("Brand")
-            </td>
-            <td>
-                @Html.TextBoxFor(Model => Model.Brand)
-            </td>
-        </tr>
+        
 
         <tr>
             <td>
@@ -75,6 +68,12 @@
             </td>
             <td>
                 <input type="submit" id="=submit" />
+            </td>
+            <td>
+                @Html.LabelFor(Model=>Model.Brand)
+            </td>
+            <td>
+                @Html.DropDownListFor(model=>model.BrandID,(IEnumerable<SelectListItem>)ViewBag.Mobile,"Select Brand")
             </td>
         </tr>
     </table>

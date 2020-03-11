@@ -17,7 +17,7 @@ namespace OnlineMobileShop.Controllers
         {
             return View();
         }
-        [OutputCache(Duration = 30)]
+     //   [OutputCache(Duration = 30)]
         public ActionResult SignUp()
         {
             return View();

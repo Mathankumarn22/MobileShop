@@ -55,11 +55,6 @@
   <ItemGroup>
     <Compile Include="BrandRepository.cs" />
     <Compile Include="DBContext.cs" />
-    <Compile Include="Migrations\202003061213245_table.cs" />
-    <Compile Include="Migrations\202003061213245_table.designer.cs">
-      <DependentUpon>202003061213245_table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MobileRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRespo.cs" />
@@ -73,11 +68,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003061213245_table.resx">
-      <DependentUpon>202003061213245_table.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

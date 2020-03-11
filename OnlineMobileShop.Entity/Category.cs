@@ -11,6 +11,8 @@ namespace OnlineMobileShop.Entity
     {
         [Key]
         public int CategoryID { get; set; } 
-
+        public int BrandID { get; set; }
+        public Brand Brand { get; set; }
+        public string CategoryName { get; set; }
     }
 }

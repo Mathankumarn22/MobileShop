@@ -26,8 +26,12 @@ namespace OnlineMobileShop.Respository
             
         }
         public IEnumerable<Mobile> Display()
-        {
+        { 
             return dBContext.mobile.ToList();            
+        }
+        public IEnumerable<Brand> Brand()
+        {
+            return dBContext.brand.ToList();
         }
 
         public void Delete(int id)
@@ -43,6 +47,7 @@ namespace OnlineMobileShop.Respository
             dBContext.Entry(mobile).State = EntityState.Modified;
             dBContext.SaveChanges();
         }
+       
       
 
     }

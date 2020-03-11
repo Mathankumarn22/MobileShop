@@ -27,28 +27,18 @@ namespace OnlineMobileShop.Controllers
       
         public ActionResult Create()
         {
+            MobileRespository mobiles = new MobileRespository();
+            ViewBag.Mobile = new SelectList(mobiles.Brand(), "BrandId", "BrandName");
             return View();
         }
         [HttpPost]
         public ActionResult Create(Mobile mobile)
         {
-           
-            if (ModelState.IsValid)
-            {
-                mobile.Brand = mobile.Brand;
-                mobile.Model = mobile.Model;
-                mobile.Battery = mobile.Battery;
-                mobile.RAM = mobile.RAM;
-                mobile.ROM = mobile.ROM;
-                mobile.Price = mobile.Price;
-                if(mobileBL.Add(mobile)>0)
-                {
-                    ViewBag.message = "Successfull";
-                    return RedirectToAction("MobileDetails");
-                }
-                ViewBag.message = "falied";
-            }
-            return View();
+            MobileRespository mobiles = new MobileRespository();
+            ViewBag.Mobile = new SelectList(mobiles.Brand(), "BrandId", "BrandName");
+            mobiles.Add(mobile);
+            return RedirectToAction("");
+
         }
         [HttpGet]
         public ActionResult Edit(int id)

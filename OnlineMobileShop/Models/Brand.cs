@@ -9,7 +9,7 @@ namespace OnlineMobileShop.Models
     public class Brand
     {
         public int BrandID { get; set; }
-        [Required]
+        [Required(ErrorMessage ="required")]
         public string BrandName { get; set; }
     }
 }

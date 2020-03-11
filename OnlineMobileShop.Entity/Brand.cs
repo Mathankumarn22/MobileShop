@@ -18,5 +18,6 @@ namespace OnlineMobileShop.Entity
         [Index(IsUnique = true)]
         [MaxLength(15)]
         public string BrandName { get; set; }
+        public ICollection<Mobile> Model { get; set; }
     }
 }
